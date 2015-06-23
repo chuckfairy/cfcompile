@@ -1,0 +1,10 @@
+{
+
+    "type": "javascript",
+
+    "header": "(function() { ",
+    "footer": "})();",
+
+    "compile": [ "files/" ]
+
+}

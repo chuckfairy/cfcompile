@@ -1,0 +1,1 @@
+(function() { function wohTest(){var r=this;r.whatever=function(){var t=r;return t}}var TEST={};})();
