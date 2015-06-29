@@ -169,11 +169,8 @@ module.exports = new function() {
             }
         }
 
-
-
-        console.log( compileString );
-
         callback(compileString);
+   
     };
 
 
