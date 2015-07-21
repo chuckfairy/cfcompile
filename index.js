@@ -213,7 +213,13 @@ module.exports = new function() {
 	this.closureCompress = function( js, callback ) {
 
 		var cc = require("closure-compiler");
-		cc.compile( js, {}, callback );
+		cc.compile( js, {}, function( err, stdout) {
+			
+			if( err ) { throw err; }
+
+			callback( stdout );
+			
+		});
 
 	}
 
