@@ -210,12 +210,19 @@ module.exports = new function() {
 
     };
 
+	this.closureCompress = function( js, callback ) {
+
+		var cc = require("closure-compiler");
+		cc.compile( js, {}, callback );
+
+	}
+
     //Compress using minify
     this.jsCompress = function(javascript, callback) {
         console.log("\nCompressing javascript");
 
         //SCOPE.yuiCompress(javascript, {type: "js"}, callback);
-        SCOPE.minifyCompress(javascript, ".js", callback);
+        SCOPE.closureCompress(javascript, callback);
     };
 
     //Compress css with YUI

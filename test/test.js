@@ -1,7 +1,7 @@
 //Compiler test
 //By Chuck
 
-var COMPILER = require("../compiler.js");
+var COMPILER = require("../index.js");
 var FS = require("fs");
 
 COMPILER.compileFromConfigFile(  __dirname + "/test.json",  function(compressed) {
