@@ -213,10 +213,12 @@ module.exports = new function() {
 	this.closureCompress = function( js, callback ) {
 
 		var cc = require("closure-compiler");
+
+		console.log( "SDF" );
+
 		cc.compile( js, {}, function( err, stdout) {
 		
-			console.log( "SDF" );	
-			if( err ) { throw err; }
+			if( err ) { console.log( err ); } 
 
 			callback( stdout );
 			
@@ -226,11 +228,11 @@ module.exports = new function() {
 
     //Compress using minify
     this.jsCompress = function(javascript, callback) {
-        console.log("\nCompressing javascript");
-
-        //SCOPE.yuiCompress(javascript, {type: "js"}, callback);
-        SCOPE.closureCompress(javascript, callback);
-    };
+   
+   		console.log("\nCompressing javascript");
+        SCOPE.minifyCompress(javascript, ".js", callback);
+    
+	};
 
     //Compress css with YUI
     this.cssCompress = function(cssData, callback) {
