@@ -214,7 +214,8 @@ module.exports = new function() {
 
 		var cc = require("closure-compiler");
 		cc.compile( js, {}, function( err, stdout) {
-			
+		
+			console.log( "SDF" );	
 			if( err ) { throw err; }
 
 			callback( stdout );
