@@ -252,7 +252,7 @@ module.exports = new function() {
     //Compress css with YUI
     this.cssCompress = function(cssData, callback) {
         console.log("\nCompressing CSS");
-        SCOPE.minifyCompress(cssData, {ex: ".css"}, callback);
+        SCOPE.minifyCompress(cssData, ".css", callback);
     };
 
     //Creating a Node Webkit app
