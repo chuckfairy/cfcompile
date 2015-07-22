@@ -79,6 +79,21 @@ module.exports = new function() {
             });
         }
 
+		//CSS
+		else if( configData.type === "css" ) {
+	
+			SCOPE.folderCompile( folderName, configData, function( precompile ) {
+		
+				SCOPE.cssCompress( precompile, function( compile ) {
+
+					callback( compile );
+
+				});
+
+			});
+
+		}
+
         //Use node-webkit
         else if(configData.type === "node-webkit") {
             SCOPE.nodeWebkitCompile(folderName, callback);
