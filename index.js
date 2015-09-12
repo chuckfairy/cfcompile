@@ -61,6 +61,12 @@ module.exports = new function() {
         var configData = JSON.parse(rawConfig);
         var folderName = PATH.dirname(configFile);
 
+        if( configFile.prefix ) {
+
+            folderName = folderName + configFile.prefix + "/";
+
+        }
+
         SCOPE.configObject = configData;
 
         //Check if config set a type
