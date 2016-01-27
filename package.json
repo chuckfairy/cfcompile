@@ -1,6 +1,6 @@
 {
     "name": "cfcompile",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "Multi Compiler for node.js",
 
     "author": "Chuck Fairy <charlieabeling@gmail.com>",
@@ -8,7 +8,6 @@
         "name": "Chuck Fairy",
         "email": "charlieabeling@gmail.com"
     }],
-
 
     "repository": {
         "type": "git",
@@ -20,11 +19,10 @@
     ],
 
     "dependencies": {
-        "minify": "*",
+        "minify": "1.4.22",
 		"closure-compiler": "*",
         "watch": "*"
     },
-
 
     "license": "GPL"
 
